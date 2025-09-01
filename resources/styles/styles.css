@@ -1,0 +1,94 @@
+:root {
+    --hex-pattern-color: #672b7e;
+
+    --hex-container-light: #46045d;
+    --hex-container-dark: #2c003e;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+#hex-container {
+    background: radial-gradient(var(--hex-container-light), var(--hex-container-dark));
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#hex-pattern {
+    background-image: url('../images/PortfolioHexPattern.svg');
+    background-size: 5%;
+    left: 50%;
+    translate: -50% 0%;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    min-width: 200%;
+    opacity: .5;
+    animation: pan 240s linear infinite;
+    will-change: background-position;
+}
+
+#hex-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent 60%, var(--hex-container-dark) 100%);
+    
+    z-index: 2;
+}
+
+@keyframes pan {
+    0% { background-position: 0% 0%;}
+    100% { background-position: 100% 0%;}
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+section {
+    margin-top: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+ul.projects {
+    list-style: none;
+    padding: 0;
+}
+
+ul.projects li {
+    margin-bottom: 0.75rem;
+}
+
+ul.projects a {
+    color: #0077cc;
+    text-decoration: none;
+}
+ul.projects a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #888;
+    font-size: 0.9rem;
+}
