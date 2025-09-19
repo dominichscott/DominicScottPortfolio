@@ -20,7 +20,6 @@ body {
     position: relative;
 }
 
-
 #hex-pattern {
     background-image: url('../images/PortfolioHexPattern.svg');
     background-size: 5%;
@@ -34,6 +33,32 @@ body {
     opacity: .5;
     animation: pan 240s linear infinite;
     will-change: background-position;
+}
+
+#title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0rem;
+    width: 100%;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    margin: 0;
+}
+
+#project-heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #hex-gradient-overlay {
@@ -52,22 +77,48 @@ body {
     100% { background-position: 100% 0%;}
 }
 
-main {
-    max-width: 800px;
+.content-card {
+    max-width: 1000px;
     margin: 2rem auto;
     background: #fff;
-    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.horizontal-display {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 4rem;
+    padding-bottom: 1rem;
+}
+
+.horizontal-game-display {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 2rem;
+}
+
+#image-container {
+    display: block;
+}
+
+#game-text-container {
+    display: block;
+}
+
+#intro-text {
+    font-size: 16pt;
+}
+
+.main-image {
+    max-width: 300px;
 }
 
 section {
     margin-top: 2rem;
-}
-
-h2 {
-    margin-bottom: 1rem;
-    color: #222;
 }
 
 ul.projects {
