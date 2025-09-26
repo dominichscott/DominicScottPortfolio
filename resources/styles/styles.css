@@ -20,6 +20,13 @@ body {
     position: relative;
 }
 
+#hex-game-container {
+    background: radial-gradient(var(--hex-container-light), var(--hex-container-dark));
+    height: 25vh;
+    overflow: hidden;
+    position: relative;
+}
+
 #hex-pattern {
     background-image: url('../images/PortfolioHexPattern.svg');
     background-size: 5%;
@@ -98,7 +105,25 @@ h1 {
     display: flex;
     align-items: center;
     gap: 100px;
-    padding: 2rem;
+    padding: 4rem;
+}
+
+.game-button {
+    padding: 1rem;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--hex-container-light);
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.git-button {
+    padding: 1rem;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--hex-container-light);
+    font-size: 16px;
+    text-decoration: none;
 }
 
 #image-container {
@@ -111,10 +136,22 @@ h1 {
 
 #intro-text {
     font-size: 16pt;
+    margin-bottom: 32px;
+}
+
+#game-text {
+    font-size: 16pt;
+    margin-bottom: 32px;
+    text-align: left;
 }
 
 .main-image {
     max-width: 300px;
+}
+
+.game-image {
+    max-width: 400px;
+    margin: 1rem;
 }
 
 section {
@@ -137,6 +174,11 @@ ul.projects a {
 ul.projects a:hover {
     text-decoration: underline;
 }
+
+iframe {
+    margin-top: 4rem;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
